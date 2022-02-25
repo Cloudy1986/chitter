@@ -1,0 +1,15 @@
+<h1>New Peep</h1>
+
+<%= form_with model: @peep do |form| %>
+  <div>
+    <%= form.label :message %><br>
+    <%= form.text_field :message %>
+    <% @peep.errors.full_messages_for(:message).each do |error_message| %>
+      <div><%= error_message %></div>
+    <% end %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
