@@ -28,14 +28,6 @@
       </div>
     </nav>
     <br>
-    <div class="container-fluid">
-      <% if @user %>
-      <h6>You are logged in as <%= @user.username %></h6>
-      <form action="log-in/destroy" method="post">
-        <input class="btn btn-dark" type="submit" value="Log out">
-      </form>
-      <% end %>
-    </div>
 
     <%= yield %>
 
