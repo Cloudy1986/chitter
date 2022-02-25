@@ -50,6 +50,7 @@ group :test do
   gem 'capybara', '>= 3.26'
   gem 'database_cleaner-active_record'
   gem 'selenium-webdriver'
+  gem 'simplecov'
   # Easy installation and use of web drivers to run system tests with browsers
   gem 'webdrivers'
 end
