@@ -4,7 +4,7 @@ A twitter clone that allows users to post messages to a public stream.
 
 ## User stories
 
-**View peeps:**
+**[View peeps](https://trello.com/c/SU5aqtBx):** ✅
 ```
 As a... user
 I want... to see peeps
