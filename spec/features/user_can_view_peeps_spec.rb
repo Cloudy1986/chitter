@@ -1,4 +1,4 @@
-require "rails_helper"
+require 'rails_helper'
 
 RSpec.feature 'View peeps', type: :feature do
   scenario 'User can view a list of peeps' do
