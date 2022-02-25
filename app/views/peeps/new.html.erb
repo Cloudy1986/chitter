@@ -1,15 +1,33 @@
-<h1>New Peep</h1>
-
-<%= form_with model: @peep do |form| %>
-  <div>
-    <%= form.label :message %><br>
-    <%= form.text_field :message %>
-    <% @peep.errors.full_messages_for(:message).each do |error_message| %>
-      <div><%= error_message %></div>
-    <% end %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
-<% end %>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chitter</title>
+  </head>
+  <body>
+    <br>
+    <div class="container">
+      <div class="row justify-content-center">
+        <h1 class="text-center">Add a new peep</h1>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="text-center">
+          <%= form_with model: @peep do |form| %>
+          <div>
+            <%= form.text_field :message %>
+            <% @peep.errors.full_messages_for(:message).each do |error_message| %>
+            <div><%= error_message %></div>
+            <% end %>
+          </div>
+          <br>
+          <div>
+            <%= form.submit class: 'btn btn-dark' %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
