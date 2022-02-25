@@ -11,7 +11,7 @@ I want... to see peeps
 So that... I can see what other people are saying
 ```
 
-**Add peeps:**
+**[Add peeps](https://trello.com/c/MleACtGU):** ✅
 ```
 As a... user
 I want... to post a peep
