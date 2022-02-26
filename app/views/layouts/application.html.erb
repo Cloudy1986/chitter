@@ -31,6 +31,12 @@
       </div>
     </nav>
     <br>
+    <div class="container-fluid">
+      <% if logged_in? %>
+      <h6>You are logged in as <%= current_user.email %></h6>
+      <%= button_to "Log out", log_out_path, method: "delete", class: "btn btn-dark" %>
+      <% end %>
+    </div>
 
     <%= yield %>
 
