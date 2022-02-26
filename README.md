@@ -18,7 +18,7 @@ I want... to post a peep
 So that... I can let people know what I'm doing
 ```
 
-**Order peeps by chronological order:**
+**[Order peeps by chronological order](https://trello.com/c/53MhySqI):** ✅
 ```
 As a... user
 I want... to see all peeps in reverse chronological order

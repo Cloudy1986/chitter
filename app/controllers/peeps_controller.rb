@@ -1,6 +1,6 @@
 class PeepsController < ApplicationController
   def index
-    @peeps = Peep.all
+    @peeps = Peep.all.sort_by(&:created_at).reverse
   end
 
   def new
