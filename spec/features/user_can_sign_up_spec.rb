@@ -11,5 +11,6 @@ RSpec.feature 'Sign up', type: :feature do
     click_button 'Sign up'
     expect(current_path).to eq '/peeps'
     expect(page).to have_content 'This is a test peep'
+    expect(page).to have_content 'You are logged in as test@example.com'
   end
 end
