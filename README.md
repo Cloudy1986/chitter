@@ -32,7 +32,7 @@ I want... to see the time at which it was made
 So that... I can better appreciate the context of a peep
 ```
 
-**Sign up and log in:**
+**[Sign up, log in & log out](https://trello.com/c/3kxVmPyx):** ✅
 ```
 As a... user
 I want... to sign up for Chitter
@@ -44,8 +44,6 @@ As a... user
 I want... to log in to Chitter
 So that...  I can post messages on Chitter as me
 ```
-
-**Log out:**
 
 ```
 As a... user
