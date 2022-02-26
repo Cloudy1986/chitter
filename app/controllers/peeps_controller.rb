@@ -4,6 +4,7 @@ class PeepsController < ApplicationController
   end
 
   def new
+    require_user
     @peep = Peep.new
   end
 

@@ -23,14 +23,29 @@
             <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/peeps">Peeps</a>
             </li>
+            <% if logged_in? %>
             <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="/peeps/new">Add new peep</a>
             </li>
+            <% else %>
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/sign-up">Sign up</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="/log-in">Log in</a>
+            </li>
+            <% end %>
           </ul>
         </div>
       </div>
     </nav>
     <br>
+    <div class="container-fluid">
+      <% if logged_in? %>
+      <h6>You are logged in as <%= current_user.email %></h6>
+      <%= button_to "Log out", log_out_path, method: "delete", class: "btn btn-dark" %>
+      <% end %>
+    </div>
 
     <%= yield %>
 
