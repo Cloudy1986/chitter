@@ -7,20 +7,26 @@
     <br>
     <div class="container">
       <div class="row justify-content-center">
-        <h1 class="text-center">Add a new peep</h1>
+        <h1 class="text-center">Sign up to Chitter</h1>
       </div>
     </div>
     <br>
     <div class="container">
       <div class="row justify-content-center">
         <div class="text-center">
-          <%= form_with model: @peep do |form| %>
+          <%= form_with(model: @user, local: true) do |form| %>
           <div>
-            <%= form.text_field :message, required: true %>
+            <%= form.label :email %><br>
+            <%= form.email_field :email, required: true %>
           </div>
           <br>
           <div>
-            <%= form.submit class: 'btn btn-dark' %>
+            <%= form.label :password %><br>
+            <%= form.password_field :password, required: true %>
+          </div>
+          <br>
+          <div>
+            <%= form.submit 'Sign up', class: 'btn btn-dark' %>
           </div>
           <% end %>
         </div>

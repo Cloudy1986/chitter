@@ -4,11 +4,11 @@ RSpec.feature 'Sign up', type: :feature do
   scenario 'User can sign up' do
     Peep.create(message: 'This is a test peep')
     visit '/'
-    click_button 'Sign Up'
+    click_button 'Sign up'
     expect(current_path).to eq '/sign-up'
-    fill_in 'email', with: 'test@example.com'
-    fill_in 'password', with: 'password123'
-    click_button 'Sign Up'
+    fill_in 'user_email', with: 'test@example.com'
+    fill_in 'user_password', with: 'password123'
+    click_button 'Sign up'
     expect(current_path).to eq '/peeps'
     expect(page).to have_content 'This is a test peep'
   end
