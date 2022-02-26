@@ -33,6 +33,7 @@ So that... I can better appreciate the context of a peep
 ```
 
 **Sign up, log in & log out:** 🚧
+
 I split this user story into two steps with two seperate trello cards:
 
 - Step 1 - [Sign up, log in & log out](https://trello.com/c/3kxVmPyx)
