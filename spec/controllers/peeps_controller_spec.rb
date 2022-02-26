@@ -16,11 +16,16 @@ RSpec.describe PeepsController, type: :controller do
   end
 
   describe 'GET /peeps/new' do
-    it 'responds with status 200' do
+    it 'responds with status 200 if logged in' do
       user = User.create(email: 'test@example.com', password: 'password123')
       session[:user_id] = user.id
       get :new
       expect(response).to have_http_status(200)
+    end
+
+    it 'redirects if not logged in' do
+      get :new
+      expect(response).to redirect_to '/log-in'
     end
   end
 
