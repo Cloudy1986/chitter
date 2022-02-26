@@ -6,14 +6,12 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to peeps_url
     else
-      flash.now[:alert] = "There was something wrong with your login details."
       render 'new'
     end
   end
   
   def destroy
     session[:user_id] = nil
-    flash[:notice] = "You have been logged out."
     redirect_to '/'
   end
 
