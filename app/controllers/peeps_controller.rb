@@ -17,6 +17,12 @@ class PeepsController < ApplicationController
     end
   end
 
+  def destroy
+    @peep = Peep.find_by(id: params[:id])
+    @peep.destroy
+    redirect_to peeps_url
+  end
+
   private
     def peep_params
       params.require(:peep).permit(:message)
