@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.feature 'Log in', type: :feature do
   scenario 'User can log in with correct email and password' do
-    Peep.create(message: 'This is a test peep')
-    User.create(email: 'test@example.com', password: 'password123')
+    user = User.create(email: 'test@example.com', password: 'password123')
+    Peep.create(message: 'This is a test peep', user_id: user.id)
     visit '/'
     click_button 'Log in'
     expect(current_path).to eq '/log-in'
@@ -15,8 +15,8 @@ RSpec.feature 'Log in', type: :feature do
   end
 
   scenario 'User cannot log in with incorrect email' do
-    Peep.create(message: 'This is a test peep')
-    User.create(email: 'test@example.com', password: 'password123')
+    user = User.create(email: 'test@example.com', password: 'password123')
+    Peep.create(message: 'This is a test peep', user_id: user.id)
     visit '/'
     click_button 'Log in'
     expect(current_path).to eq '/log-in'
@@ -28,8 +28,8 @@ RSpec.feature 'Log in', type: :feature do
   end
 
   scenario 'User cannot log in with incorrect password' do
-    Peep.create(message: 'This is a test peep')
-    User.create(email: 'test@example.com', password: 'password123')
+    user = User.create(email: 'test@example.com', password: 'password123')
+    Peep.create(message: 'This is a test peep', user_id: user.id)
     visit '/'
     click_button 'Log in'
     expect(current_path).to eq '/log-in'
