@@ -1,6 +1,6 @@
 # Chitter
 
-A twitter clone that allows users to post messages to a public stream.
+A twitter clone that allows users to post 'peeps' to a public stream. You can view and interact with the live application [here](https://thawing-dusk-78531.herokuapp.com/).
 
 ## User stories
 
@@ -84,7 +84,7 @@ I used a trello board to track my progress with building the features for the us
 
 ## Production app
 
-The application is deployed to Heroku. You can view and interact with it [here](https://thawing-dusk-78531.herokuapp.com/).
+The application is hosted on Heroku. I deployed to Heroku after merging each feature to main. I took the approach of deploying small and often in order to deliver value to users early and regularly. I also wanted to reduce the risk of deploying everything at the end and hitting problems. You can view and interact with it [here](https://thawing-dusk-78531.herokuapp.com/).
 
 ## Setting up and running the app locally
 
