@@ -48,4 +48,14 @@ RSpec.describe PeepsController, type: :controller do
     end
   end
 
+  describe 'DELETE /peeps/:id' do
+    it 'deletes a peep from the database and redirects to /peeps' do
+      user = User.create(email: 'test@example.com', password: '123456')
+      peep = Peep.create(message: 'This is a peep', user_id: user.id)
+      delete :destroy, params: { id: peep.id }
+      expect(Peep.all).to be_empty
+      expect(response).to redirect_to '/peeps'
+    end
+  end
+
 end

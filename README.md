@@ -57,7 +57,7 @@ I want... to log out of Chitter
 So that...  someone can't post messages as me
 ```
 
-**Delete peeps:**
+**[Delete peeps](https://trello.com/c/Reu0mN9T):** ✅
 ```
 As a... user
 I want... to delete my own peep
