@@ -31,7 +31,8 @@ RSpec.describe PeepsController, type: :controller do
 
   describe 'POST /peeps' do
     it 'adds a peep to the database and redirects with status 200 if form input is valid' do
-      post :create, params: { peep: { message: 'This is a peep' } }
+      user = User.create(email: 'test@example.com', password: '123456')
+      post :create, params: { peep: { message: "This is a peep" } }, session: { user_id: user.id }
       peep = Peep.find_by(message: 'This is a peep')
       expect(peep).to be_a Peep
       expect(peep.message).to eq 'This is a peep'
@@ -39,7 +40,8 @@ RSpec.describe PeepsController, type: :controller do
     end
 
     it 'does not add a peep to the database or redirect to /peeps if form input is not valid' do
-      post :create, params: { peep: { message: nil } }
+      user = User.create(email: 'test@example.com', password: '123456')
+      post :create, params: { peep: { message: nil } }, session: { user_id: user.id }
       peeps = Peep.all
       expect(peeps).to be_empty
       expect(response).to_not redirect_to '/peeps'

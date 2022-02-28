@@ -9,7 +9,7 @@ class PeepsController < ApplicationController
   end
 
   def create
-    @peep = Peep.new(peep_params)
+    @peep = Peep.new(message: peep_params[:message], user_id: session[:user_id])
     if @peep.save
       redirect_to peeps_url
     else
