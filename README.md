@@ -32,7 +32,7 @@ I want... to see the time at which it was made
 So that... I can better appreciate the context of a peep
 ```
 
-**Sign up, log in & log out:** 🚧
+**Sign up, log in & log out:** ✅
 
 I split this user story into two steps with two seperate trello cards:
 
