@@ -61,5 +61,16 @@
       <% end %>
     <% end %>
     <br>
+    <% if logged_in? %>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="text-center">
+            <%= button_to "Add a new comment", new_peep_comment_path(@peep), method: 'get', class: "btn btn-dark" %>
+            <br>
+          </div>
+        </div>
+      </div>
+      <br>
+    <% end %>
   </body>
 </html>

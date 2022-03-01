@@ -43,10 +43,6 @@
                 <% end %>
                 <%= button_to "View comments", peep_comments_path(peep), method: 'get', class: "btn btn-dark" %>
                 <br>
-                <% if logged_in? %>
-                <%= button_to "Add comment", new_peep_comment_path(peep), method: 'get', class: "btn btn-dark" %>
-                <br>
-                <% end %>
               </div>
             </div>
           </div>
