@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
   get '/', to: "peeps#homepage"
   
-  resources :peeps
+  resources :peeps do
+    resources :comments
+  end
 
   get 'sign-up', to: "users#new"
   get 'log-in', to: "sessions#new"
