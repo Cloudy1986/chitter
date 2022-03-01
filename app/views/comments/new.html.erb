@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chitter</title>
+  </head>
+  <body>
+    <br>
+    <div class="container">
+      <div class="row justify-content-center">
+        <h1 class="text-center">Add a comment</h1>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="text-center">
+          <%= form_with model: [ @peep, @peep.comments.build ] do |form| %>
+          <div>
+            <%= form.text_field :body, required: true %>
+          </div>
+          <br>
+          <div>
+            <%= form.submit 'Add comment', class: 'btn btn-dark' %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

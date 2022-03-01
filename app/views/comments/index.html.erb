@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Chitter</title>
+  </head>
+  <body>
+    <br>
+    <div class="container">
+      <div class="row justify-content-center">
+        <h1 class="text-center">Peep</h1>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="card" style="width: 40rem;">
+          <div class="card-body text-center">
+            <br>
+            <h5 class="card-title"><%= @peep.message %></h5>
+            <br>
+            <h6 class="card-subtitle mb-2 text-muted">Created by <%= @peep.user.email %> at <%= Time.parse("#{@peep.created_at}").strftime("%H:%M %d/%m/%Y") %></h6>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <div class="container">
+      <div class="row justify-content-center">
+        <h1 class="text-center">Comments</h1>
+      </div>
+    </div>
+    <br>
+    <% if @peep.comments.empty? %>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="card" style="width: 40rem;">
+            <div class="card-body text-center">
+              <br>
+              <h5 class="card-title">No comments yet</h5>
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% else %>
+      <% @peep.comments.each do |comment| %>
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="card" style="width: 40rem;">
+              <div class="card-body text-center">
+                <br>
+                <h5 class="card-title"><%= comment.body %></h5>
+                <br>
+                <h6 class="card-subtitle mb-2 text-muted">Comment by <%= comment.user.email %> at <%= Time.parse("#{comment.created_at}").strftime("%H:%M %d/%m/%Y") %></h6>
+                <br>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+    <br>
+    <% if logged_in? %>
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="text-center">
+            <%= button_to "Add a new comment", new_peep_comment_path(@peep), method: 'get', class: "btn btn-dark" %>
+            <br>
+          </div>
+        </div>
+      </div>
+      <br>
+    <% end %>
+  </body>
+</html>

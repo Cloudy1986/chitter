@@ -102,7 +102,6 @@ RSpec.describe PeepsController, type: :controller do
       peep = Peep.create(message: 'This is a peep', user_id: user.id)
       patch :update, params: { peep: { message: nil }, id: peep.id }
       returned_peep = Peep.find_by(id: peep.id)
-      p returned_peep
       expect(returned_peep.message).to eq peep.message
       expect(response).to_not redirect_to peeps_url
     end
