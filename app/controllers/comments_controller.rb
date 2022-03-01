@@ -12,8 +12,12 @@ class CommentsController < ApplicationController
 
   def create
     @peep = Peep.find(params[:peep_id])
-    @comment = @peep.comments.create(body: comment_params[:body], user_id: current_user.id)
-    redirect_to peep_comments_path
+    @comment = @peep.comments.new(body: comment_params[:body], user_id: current_user.id)
+    if @comment.save
+      redirect_to peep_comments_path
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   private
