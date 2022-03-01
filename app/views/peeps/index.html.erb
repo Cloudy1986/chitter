@@ -36,6 +36,8 @@
                 <h6 class="card-subtitle mb-2 text-muted"><%= peep.user.email %></h6>
                 <br>
                 <% if logged_in? && current_user.id == peep.user_id %>
+                <%= button_to "Edit Peep", edit_peep_path(peep), method: 'get', class: "btn btn-dark" %>
+                <br>
                 <%= button_to "Delete Peep", peep_path(peep), method: 'delete', data: { turbo_confirm: "Are you sure?" }, class: "btn btn-dark" %>
                 <br>
                 <% end %>

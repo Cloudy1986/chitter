@@ -23,6 +23,20 @@ class PeepsController < ApplicationController
     redirect_to peeps_url
   end
 
+  def edit
+    @peep = Peep.find(params[:id])
+  end
+
+  def update
+    @peep = Peep.find(params[:id])
+
+    if @peep.update(peep_params)
+      redirect_to peeps_url
+    else
+      render :edit, status: :unprocessable_entity
+    end
+  end
+
   private
     def peep_params
       params.require(:peep).permit(:message)
