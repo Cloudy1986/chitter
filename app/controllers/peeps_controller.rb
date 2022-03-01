@@ -24,6 +24,7 @@ class PeepsController < ApplicationController
   end
 
   def edit
+    require_user
     @peep = Peep.find(params[:id])
   end
 
