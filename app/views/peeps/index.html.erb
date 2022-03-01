@@ -41,10 +41,8 @@
                 <%= button_to "Delete Peep", peep_path(peep), method: 'delete', data: { turbo_confirm: "Are you sure?" }, class: "btn btn-dark" %>
                 <br>
                 <% end %>
-                <% if logged_in? %>
                 <%= button_to "View comments", peep_comments_path(peep), method: 'get', class: "btn btn-dark" %>
                 <br>
-                <% end %>
               </div>
             </div>
           </div>
