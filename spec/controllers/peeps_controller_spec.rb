@@ -58,4 +58,54 @@ RSpec.describe PeepsController, type: :controller do
     end
   end
 
+  describe 'GET /peeps/:id/edit' do
+    it 'responds with status 200 if logged in and peep belongs to logged in user' do
+      user = User.create(email: 'test@example.com', password: 'password123')
+      peep = Peep.create(message: 'This is a peep', user_id: user.id)
+      session[:user_id] = user.id
+      get :edit, params: { id: peep.id }
+      expect(response).to have_http_status(200)
+    end
+
+    it 'redirects if not logged in' do
+      user = User.create(email: 'test@example.com', password: 'password123')
+      another_user = User.create(email: 'another.user@example.com', password: '123456')
+      peep = Peep.create(message: 'This is a peep', user_id: user.id)
+      session[:user_id] = another_user.id
+      get :edit, params: { id: peep.id }
+      expect(response).to redirect_to log_in_path
+    end
+
+    it 'redirects if peep does not belong to logged in user' do
+      user = User.create(email: 'test@example.com', password: 'password123')
+      another_user = User.create(email: 'another.user@example.com', password: '123456')
+      peep = Peep.create(message: 'This is a peep', user_id: another_user.id)
+      session[:user_id] = user.id
+      get :edit, params: { id: peep.id }
+      expect(response).to redirect_to log_in_path
+    end
+  end
+
+  describe 'PATCH /peeps' do
+    it 'updates a peep in the database and redirects with status 200 if form input is valid' do
+      user = User.create(email: 'test@example.com', password: '123456')
+      peep = Peep.create(message: 'This is a peep', user_id: user.id)
+      patch :update, params: { peep: { message: 'Updating this peep text' }, id: peep.id }
+      returned_peep = Peep.find_by(id: peep.id)
+      expect(returned_peep).to be_a Peep
+      expect(returned_peep.message).to eq 'Updating this peep text'
+      expect(response).to redirect_to peeps_url
+    end
+
+    it 'does not update a peep in the database or redirect to /peeps if input is not valid' do
+      user = User.create(email: 'test@example.com', password: '123456')
+      peep = Peep.create(message: 'This is a peep', user_id: user.id)
+      patch :update, params: { peep: { message: nil }, id: peep.id }
+      returned_peep = Peep.find_by(id: peep.id)
+      p returned_peep
+      expect(returned_peep.message).to eq peep.message
+      expect(response).to_not redirect_to peeps_url
+    end
+  end
+
 end

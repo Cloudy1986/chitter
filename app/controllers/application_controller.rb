@@ -14,5 +14,5 @@ class ApplicationController < ActionController::Base
     if !logged_in?
       redirect_to log_in_path
     end
-  end
+  end  
 end
