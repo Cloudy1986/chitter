@@ -18,4 +18,15 @@ RSpec.feature 'Add comments', type: :feature do
     expect(current_path).to eq "/peeps/#{peep.id}/comments"
     expect(page).to have_content 'This is a comment'
   end
+
+  scenario 'User cannot add a comment if not logged in' do
+    user = User.create(email: 'test@example.com', password: 'password123')
+    peep = Peep.create(message: 'This is a peep', user_id: user.id)
+    visit '/peeps'
+    click_button 'View comments'
+    expect(current_path).to eq "/peeps/#{peep.id}/comments"
+    expect(page).to_not have_button 'Add a new comment'
+    visit "/peeps/#{peep.id}/comments/new"
+    expect(current_path).to eq '/log-in'
+  end
 end
