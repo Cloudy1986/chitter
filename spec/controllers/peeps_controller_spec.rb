@@ -58,4 +58,32 @@ RSpec.describe PeepsController, type: :controller do
     end
   end
 
+  describe 'GET /peeps/:id/edit' do
+    it 'responds with status 200 if logged in and peep belongs to logged in user' do
+      user = User.create(email: 'test@example.com', password: 'password123')
+      peep = Peep.create(message: 'This is a peep', user_id: user.id)
+      session[:user_id] = user.id
+      get :edit, params: { id: peep.id }
+      expect(response).to have_http_status(200)
+    end
+
+    it 'redirects if not logged in' do
+      user = User.create(email: 'test@example.com', password: 'password123')
+      another_user = User.create(email: 'another.user@example.com', password: '123456')
+      peep = Peep.create(message: 'This is a peep', user_id: user.id)
+      session[:user_id] = another_user.id
+      get :edit, params: { id: peep.id }
+      expect(response).to redirect_to log_in_path
+    end
+
+    it 'redirects if peep does not belong to logged in user' do
+      user = User.create(email: 'test@example.com', password: 'password123')
+      another_user = User.create(email: 'another.user@example.com', password: '123456')
+      peep = Peep.create(message: 'This is a peep', user_id: another_user.id)
+      session[:user_id] = user.id
+      get :edit, params: { id: peep.id }
+      expect(response).to redirect_to log_in_path
+    end
+  end
+
 end

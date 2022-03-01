@@ -27,7 +27,7 @@ class PeepsController < ApplicationController
     require_user
     @peep = Peep.find(params[:id])
     if current_user.id != @peep.user_id
-      redirect_to peeps_url
+      redirect_to log_in_path
     end
   end
 
