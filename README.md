@@ -11,12 +11,15 @@ I want... to see peeps
 So that... I can see what other people are saying
 ```
 
+![View peeps image](./screenshots/view_peeps.png?raw=true)
+
 **[Add peeps](https://trello.com/c/MleACtGU):** ✅
 ```
 As a... user
 I want... to post a peep
 So that... I can let people know what I'm doing
 ```
+![Add peep image](./screenshots/add_peep.png?raw=true)
 
 **[Order peeps by chronological order](https://trello.com/c/53MhySqI):** ✅
 ```
@@ -25,12 +28,16 @@ I want... to see all peeps in reverse chronological order
 So that... I can see what others are saying most recently
 ```
 
+![Order peeps image](./screenshots/view_peeps.png?raw=true)
+
 **[Display when a peep was created](https://trello.com/c/845fZKtL):** ✅
 ```
 As a... user
 I want... to see the time at which it was made
 So that... I can better appreciate the context of a peep
 ```
+
+![Peep created image](./screenshots/view_peeps.png?raw=true)
 
 **Sign up, log in & log out:** ✅
 
@@ -56,6 +63,7 @@ As a... user
 I want... to log out of Chitter
 So that...  someone can't post messages as me
 ```
+
 ![Sign up image](./screenshots/sign_up.png?raw=true)
 
 ![Log in image](./screenshots/log_in.png?raw=true)
@@ -76,12 +84,18 @@ I want... to update my own peep
 So that... I can update a peep if I've made a typo
 ```
 
+![Update peep image](./screenshots/update_peep.png?raw=true)
+
 **[Comment on a peep](https://trello.com/c/0zXCjSod):** ✅
 ```
 As a... user
 I want... to comment on a peep
 So that... I can interact with others users via their peeps
 ```
+
+![View comments image](./screenshots/view_comments.png?raw=true)
+
+![Add comment image](./screenshots/add_comment.png?raw=true)
 
 ## Tracking development of the app
 
