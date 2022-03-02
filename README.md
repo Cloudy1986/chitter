@@ -13,6 +13,8 @@ So that... I can see what other people are saying
 
 ![View peeps image](./screenshots/view_peeps.png?raw=true)
 
+----------------------
+
 **[Add peeps](https://trello.com/c/MleACtGU):** ✅
 ```
 As a... user
