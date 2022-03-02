@@ -23,6 +23,8 @@ So that... I can let people know what I'm doing
 ```
 ![Add peep image](./screenshots/add_peep.png?raw=true)
 
+----------------------
+
 **[Order peeps by chronological order](https://trello.com/c/53MhySqI):** ✅
 ```
 As a... user
@@ -32,6 +34,8 @@ So that... I can see what others are saying most recently
 
 ![Order peeps image](./screenshots/view_peeps.png?raw=true)
 
+----------------------
+
 **[Display when a peep was created](https://trello.com/c/845fZKtL):** ✅
 ```
 As a... user
@@ -40,6 +44,8 @@ So that... I can better appreciate the context of a peep
 ```
 
 ![Peep created image](./screenshots/view_peeps.png?raw=true)
+
+----------------------
 
 **Sign up, log in & log out:** ✅
 
@@ -72,12 +78,17 @@ So that...  someone can't post messages as me
 
 ![Log out image](./screenshots/log_out.png?raw=true)
 
+----------------------
+
 **[Delete peeps](https://trello.com/c/Reu0mN9T):** ✅
 ```
 As a... user
 I want... to delete my own peep
 So that... I can remove a peep I'm no longer happy with
 ```
+![Delete peep image](./screenshots/delete_peep.png?raw=true)
+
+----------------------
 
 **[Update peeps](https://trello.com/c/pwPxpEj4):** ✅
 ```
@@ -87,6 +98,8 @@ So that... I can update a peep if I've made a typo
 ```
 
 ![Update peep image](./screenshots/update_peep.png?raw=true)
+
+----------------------
 
 **[Comment on a peep](https://trello.com/c/0zXCjSod):** ✅
 ```
@@ -98,6 +111,8 @@ So that... I can interact with others users via their peeps
 ![View comments image](./screenshots/view_comments.png?raw=true)
 
 ![Add comment image](./screenshots/add_comment.png?raw=true)
+
+----------------------
 
 ## Tracking development of the app
 
