@@ -82,7 +82,7 @@ So that... I can interact with others users via their peeps
 
 I used a trello board to track my progress with building the features for the user stories above. It's a public board if you want to take a look - https://trello.com/b/A4glMyDh/chitter-rails. I also worked on each feature in a branch before merging the branch into main via a pull request. This was in order to replicate working in a development team and keep up the good development practices I've developed at Makers Academy.
 
-## Production app
+## Production application
 
 The application is hosted on Heroku. I deployed to Heroku after merging each feature to main. I took the approach of deploying small and often in order to deliver value to users early and regularly. I also wanted to reduce the risk of deploying everything at the end and hitting problems. You can view and interact with it [here](https://thawing-dusk-78531.herokuapp.com/).
 
