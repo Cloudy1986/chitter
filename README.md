@@ -88,6 +88,13 @@ The application is hosted on Heroku. I deployed to Heroku after merging each fea
 
 ## Setting up and running the app locally
 
+1. Clone this repository - `git clone https://github.com/Cloudy1986/chitter.git`
+2. Navigate to the top level directory of the cloned repository
+3. Run `bundle install` via the command line
+4. Run `rails db:create` then `rails db:migrate` via the command line to set up the database
+5. Run `rspec` via the command line to view tests. They should all be green.
+6. Run `rails s` to start the server
+7. Navigate to your local host and you should be able to interact with the application in the development environment
 
 ## Test coverage and running the tests locally
 
