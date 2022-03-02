@@ -96,4 +96,4 @@ The application is hosted on Heroku. I deployed to Heroku after merging each fea
 - 51 tests covering models, controllers and features.
 - To run the tests navigate to the top level directory of your cloned repo and run `rspec` via the command line.
 
-![Test coverage image](cv-projects/chitter/screenshots/test_coverage.png?raw=true)
+![Test coverage image](./screenshots/test_coverage.png?raw=true)
