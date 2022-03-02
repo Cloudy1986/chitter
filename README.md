@@ -91,3 +91,9 @@ The application is hosted on Heroku. I deployed to Heroku after merging each fea
 
 ## Test coverage and running the tests locally
 
+- 100% test coverage.
+- 96 lines covered with 0 lines missed.
+- 51 tests covering models, controllers and features.
+- To run the tests navigate to the top level directory of your cloned repo and run `rspec` via the command line.
+
+![Test coverage image](/cv-projects/chitter/screenshots/test_coverage.png?raw=true)
