@@ -56,6 +56,11 @@ As a... user
 I want... to log out of Chitter
 So that...  someone can't post messages as me
 ```
+![Sign up image](./screenshots/sign_up.png?raw=true)
+
+![Log in image](./screenshots/log_in.png?raw=true)
+
+![Log out image](./screenshots/log_out.png?raw=true)
 
 **[Delete peeps](https://trello.com/c/Reu0mN9T):** ✅
 ```
